@@ -29,7 +29,7 @@ class Account:
                 balance += int(item[8::])
             if (item[0:7]) == 'expense':
                 balance -= int(item[8::])
-        result = 'ბალანსი ანგარიშზე' + str(balance)
+        result = 'ბალანსი ანგარიშზე   ' + str(balance)
         return(print(result))
         
 account = Account()

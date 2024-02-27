@@ -4,11 +4,12 @@
 import random
 step = 0
 userInput = None
-compNumber = random.randrange(0,50)
+maxNumber = 100
+compNumber = random.randrange(0,maxNumber)
 while userInput != compNumber:
     print()
     try:
-        userInput = int(input("შეიყვანეთ რიცხვი \n"))
+        userInput = int(input("შეიყვანეთ რიცხვი max=100 \n"))
         step += 1
         if userInput > compNumber:
             print('მაღალია')
