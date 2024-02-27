@@ -1,8 +1,8 @@
 #Hangman
 import random
-maxTry = 10
 words = ['python', 'house', 'sun', 'immortal']
 chosenWord = random.choice(words)
+maxTry = len(chosenWord) * 1.5
 displayWord = ("_" * len(chosenWord))
 print(displayWord)
 while ('_' in  displayWord):

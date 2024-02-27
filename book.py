@@ -1,6 +1,3 @@
-# project book
-
-
 import json
 json_file_path = 'bookManager.json'
 
