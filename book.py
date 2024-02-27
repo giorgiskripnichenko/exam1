@@ -38,10 +38,16 @@ class BookManager:
 
     def showAllBooks(self):
         print('\n'*2,'-----------ყველა წიგნი-----------')
-        with open("bookManager.json", mode='r', encoding='utf-8') as file:
-            file_content = json.load(file)
-            print(file_content)
-        print('\n'*2,'-----------------------------------')
+        try:
+            with open("bookManager.json", mode='r', encoding='utf-8') as file:
+                file_content = json.load(file)
+                print(file_content)
+            print('\n'*2,'-----------------------------------')
+        except:
+            file = open(json_file_path, "w")
+            file.close()
+            with open(json_file_path, 'r') as file:
+                print("no data")
 
     def searchBookByTitle(self, search_title):
         with open("bookManager.json", mode='r', encoding='utf-8') as file:
@@ -85,3 +91,7 @@ while True:
     if a == 0:
         exit()
 
+
+
+# ტავიდან ჯსონ ფაილი არაა
+        # try except 

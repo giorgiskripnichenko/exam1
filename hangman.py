@@ -11,16 +11,19 @@ while ('_' in  displayWord):
         print("ცდების რაოდენობა ამოიწურა")
         exit()
     userInput = input('შეიყვანეთ ასობგერა \n \n')
-    if  userInput in chosenWord:
-        indexes = ([index for index, char in enumerate(chosenWord) if char == userInput])
-        displayWord = list(displayWord)
-        for item in indexes:
-            displayWord[item] = userInput
-        displayWord = ''.join(displayWord)
-        print('არის ასეთი ასობგერა ',displayWord)
-    else:
-        print('არ არის ასეთი ასობგერა ',displayWord)
-    maxTry -= 1
+    try:
+        if  userInput in chosenWord:
+            indexes = ([index for index, char in enumerate(chosenWord) if char == userInput])
+            displayWord = list(displayWord)
+            for item in indexes:
+                displayWord[item] = userInput
+            displayWord = ''.join(displayWord)
+            print('არის ასეთი ასობგერა ',displayWord)
+        else:
+            print('არ არის ასეთი ასობგერა ',displayWord)
+        maxTry -= 1
+    except Exception as e:
+        print(e)
 
 print("გილოცავთ გამოიცანით ")
         
